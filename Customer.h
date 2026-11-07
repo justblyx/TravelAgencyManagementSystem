@@ -1,0 +1,22 @@
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
+#include <vector>
+#include <algorithm>
+#include <string>
+#include "TravelTypes.h"
+
+// Module 1: Customer / Member Management
+
+bool registerCustomer(std::vector<Customer>& customers);
+int findCustomerByID(const std::vector<Customer>& customers, int id);
+bool updateCustomer(std::vector<Customer>& customers, int id);
+bool deleteCustomer(std::vector<Customer>& customers, int id);
+bool displayAllCustomers(const std::vector<Customer>& customers);
+void printCustomerProfile(const Customer& c);
+void customerMenu(std::vector<Customer>& customers);
+std::string calculateMembershipTier(int earnedPoints);
+void updateMembershipTier(Customer& customer);
+
+int calculatePointsEarned(double amount);
+
+#endif
